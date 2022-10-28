@@ -6,7 +6,6 @@ from collections import Counter
 with open("EnglishText.txt", "r") as file:
  lines = file.read()
 
-# print(Counter([''.join(filter(str.isalpha, x.lower())) for x in lines.split() if ''.join(filter(str.isalpha, x.lower()))]))
 
 def count_word(word):
  if word in total_count:
