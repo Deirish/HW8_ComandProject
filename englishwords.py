@@ -6,13 +6,6 @@ from collections import Counter
 
 with open("EnglishText.txt", "r") as file:
  lines = file.read()
-word_list = []
 
-for word in lines.split():
-    clear_word = " "
-    for letter in word:
-        if letter.isalpha():
-            clear_word += letter.lower()
-    word_list.append(clear_word)
-print(Counter(word_list))
+print(Counter([''.join(filter(str.isalpha, x.lower())) for x in lines.split() if ''.join(filter(str.isalpha, x.lower()))]))
 
